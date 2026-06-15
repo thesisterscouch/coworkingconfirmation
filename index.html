@@ -127,7 +127,7 @@
 
   .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-bottom: 3rem;
   }
@@ -314,7 +314,7 @@
     text-underline-offset: 3px;
   }
 
-  @media (max-width: 520px) {
+  @media (max-width: 600px) {
     .benefits-grid { grid-template-columns: 1fr 1fr; }
     .suite-section { padding: 1.5rem 1.25rem; }
   }
@@ -359,7 +359,11 @@
       <h3>Community</h3>
       <p>A curated, intentional space shared with like-minded women.</p>
     </div>
-
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="ti ti-building-store" aria-hidden="true"></i></div>
+      <h3>Retail access</h3>
+      <p>Our curated vendor collection launches in July — something to look forward to.</p>
+    </div>
   </div>
 
   <div class="hours-bar">
@@ -415,13 +419,21 @@
       </li>
     </ul>
   </div>
+  <p style="font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-mid); text-align: center; margin-bottom: 3rem;">
+    Want to learn more about everything we offer at the Wellness Hub?<br />
+    <a href="https://www.thesisterscouch.com" style="color: var(--terracotta); text-decoration: underline; text-underline-offset: 3px; font-weight: 400;">Visit us at thesisterscouch.com</a>
+  </p>
 
-</main>
+
 
 <footer>
   <p>
     The Sisters' Couch &nbsp;·&nbsp; 19562 Grand River Ave, Detroit, MI 48223<br />
     <a href="https://thesisterscouch.com">thesisterscouch.com</a>
+  </p>
+  <p style="margin-top: 0.75rem;">
+    Want to learn more about everything we offer at the Wellness Hub?<br />
+    <a href="https://www.thesisterscouch.com">Visit our website</a>
   </p>
 </footer>
 
