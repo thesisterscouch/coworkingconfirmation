@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Welcome to Co-Working Day — The Sisters' Couch</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --forest: #2C4A3E;
+    --forest-light: #3D6B5A;
+    --terracotta: #C4622D;
+    --blush: #E8C4B8;
+    --cream: #FAF6F1;
+    --taupe: #B5A898;
+    --taupe-dark: #7A6E65;
+    --text-dark: #2A2220;
+    --text-mid: #5C4F47;
+  }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    min-height: 100vh;
+  }
+
+  header {
+    background-color: var(--forest);
+    padding: 2rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+
+  header .wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blush);
+    margin-bottom: 0.75rem;
+  }
+
+  header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 500;
+    color: #FAF6F1;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  header p {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--blush);
+    letter-spacing: 0.05em;
+  }
+
+  .confirmation-banner {
+    background-color: var(--terracotta);
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+
+  .confirmation-banner p {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FAF6F1;
+    letter-spacing: 0.04em;
+  }
+
+  .confirmation-banner strong {
+    font-weight: 500;
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .welcome-text {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .welcome-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 500;
+    color: var(--forest);
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+
+  .welcome-text p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.75;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .divider {
+    width: 48px;
+    height: 1.5px;
+    background-color: var(--terracotta);
+    margin: 1.5rem auto;
+  }
+
+  .section-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--taupe-dark);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .benefit-card {
+    background: #fff;
+    border: 0.5px solid var(--blush);
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+
+  .benefit-icon {
+    font-size: 22px;
+    color: var(--forest);
+    margin-bottom: 0.6rem;
+  }
+
+  .benefit-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 0.3rem;
+  }
+
+  .benefit-card p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  .suite-section {
+    background: var(--forest);
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .suite-section .eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blush);
+    margin-bottom: 0.75rem;
+  }
+
+  .suite-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+    font-weight: 500;
+    color: #FAF6F1;
+    margin-bottom: 0.75rem;
+  }
+
+  .suite-section p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--blush);
+    line-height: 1.75;
+    max-width: 480px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .suite-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .suite-tag {
+    background: rgba(232, 196, 184, 0.15);
+    border: 0.5px solid rgba(232, 196, 184, 0.35);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--blush);
+    letter-spacing: 0.04em;
+  }
+
+  .booking-embed {
+    margin-top: 1.5rem;
+  }
+
+  .booking-embed iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    min-height: 600px;
+    background: #fff;
+  }
+
+  .rules-section {
+    margin-bottom: 3rem;
+  }
+
+  .rules-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--forest);
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .rules-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .rules-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #fff;
+    border: 0.5px solid var(--blush);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  .rules-list li i {
+    font-size: 17px;
+    color: var(--terracotta);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .hours-bar {
+    background: var(--blush);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hours-item .label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--taupe-dark);
+    margin-bottom: 0.2rem;
+  }
+
+  .hours-item .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--forest);
+  }
+
+  footer {
+    background: var(--forest);
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  footer p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--blush);
+    line-height: 1.8;
+  }
+
+  footer a {
+    color: var(--blush);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 520px) {
+    .benefits-grid { grid-template-columns: 1fr 1fr; }
+    .suite-section { padding: 1.5rem 1.25rem; }
+  }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
+<body>
+
+<header>
+  <p class="wordmark">The Sisters' Couch</p>
+  <h1>You're all set.</h1>
+  <p>19562 Grand River Ave &nbsp;·&nbsp; Detroit, MI 48223</p>
+</header>
+
+<div class="confirmation-banner">
+  <p>Your payment is confirmed. <strong>Check your email for your receipt.</strong></p>
+</div>
+
+<main>
+
+  <div class="welcome-text">
+    <h2>Welcome to the Wellness Hub.</h2>
+    <p>We're so glad you chose to spend your day with us. This is a space designed for you to focus, breathe, and get things done — surrounded by a community of women doing the same.</p>
+    <div class="divider"></div>
+  </div>
+
+  <p class="section-label">What's included today</p>
+
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="ti ti-wifi" aria-hidden="true"></i></div>
+      <h3>High-speed WiFi</h3>
+      <p>Fast, reliable connection all session long.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="ti ti-cup" aria-hidden="true"></i></div>
+      <h3>Refreshments</h3>
+      <p>Tea and light refreshments available throughout the day.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
+      <h3>Community</h3>
+      <p>A curated, intentional space shared with like-minded women.</p>
+    </div>
+
+  </div>
+
+  <div class="hours-bar">
+    <div class="hours-item">
+      <p class="label">Days available</p>
+      <p class="value">Tuesday – Friday</p>
+    </div>
+    <div class="hours-item">
+      <p class="label">Hours</p>
+      <p class="value">10:00 AM – 3:00 PM</p>
+    </div>
+    <div class="hours-item">
+      <p class="label">Capacity</p>
+      <p class="value">Limited</p>
+    </div>
+  </div>
+
+  <div class="suite-section">
+    <p class="eyebrow">Need a private space?</p>
+    <h2>Reserve the Wellness Suite</h2>
+    <p>Need to take a quick call, hold a client meeting, or carve out a focused hour? The Wellness Suite is available to all co-working guests — just $25/hour, bookable in advance. Your suite booking includes your co-working access for the rest of the day.</p>
+    <div class="suite-tags">
+      <span class="suite-tag">Private & quiet</span>
+      <span class="suite-tag">1-hour blocks</span>
+      <span class="suite-tag">Client-ready</span>
+      <span class="suite-tag">Co-working included</span>
+      <span class="suite-tag">Book in advance</span>
+    </div>
+    <div class="booking-embed">
+      <script src='https://square.site/appointments/buyer/widget/55gcyp21e0xcgc/LBDMK00TRR9W6.js'></script>
+    </div>
+  </div>
+
+  <div class="rules-section">
+    <div class="divider"></div>
+    <h2>A few things to keep in mind</h2>
+    <ul class="rules-list">
+      <li>
+        <i class="ti ti-clock" aria-hidden="true"></i>
+        <span>Co-working hours run <strong>10 AM – 3 PM</strong>. Please plan to wrap up and clear your space by 3 PM so we can close on time.</span>
+      </li>
+      <li>
+        <i class="ti ti-volume" aria-hidden="true"></i>
+        <span>Keep noise at a considerate level. This is a focused space — phone calls and video meetings are best taken in the Wellness Suite.</span>
+      </li>
+      <li>
+        <i class="ti ti-armchair" aria-hidden="true"></i>
+        <span>Please leave your space as you found it — tidy your area before you go so the next guest walks into a welcoming space.</span>
+      </li>
+      <li>
+        <i class="ti ti-heart" aria-hidden="true"></i>
+        <span>Be kind and community-minded. The Sisters' Couch is a space built on mutual respect — treat it and the people in it accordingly.</span>
+      </li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <p>
+    The Sisters' Couch &nbsp;·&nbsp; 19562 Grand River Ave, Detroit, MI 48223<br />
+    <a href="https://thesisterscouch.com">thesisterscouch.com</a>
+  </p>
+</footer>
+
+</body>
+</html>
